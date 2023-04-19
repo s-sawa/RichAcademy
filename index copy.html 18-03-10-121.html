@@ -45,59 +45,21 @@
         </div>
       </header>
       <!-- ヒーローイメージ -->
-      <div class="slider">
-        <div>
-          <div class="slide-content">
-            <img
-              class="slide-image"
-              src="./img/body-hero-image.jpeg"
-              alt="Image 1"
-            />
-            <div class="hero_text">
-              <h2>Text Overlay 1</h2>
-              <p>This is some text for image 1.</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="slide-content">
-            <img
-              class="slide-image"
-              src="./img/body-hero-image2.jpeg"
-              alt="Image 2"
-            />
-            <div class="hero_text">
-              <h2>Text Overlay 2</h2>
-              <p>This is some text for image 2.</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="slide-content">
-            <img
-              class="slide-image"
-              src="./img/body-hero-image3.jpeg"
-              alt="Image 3"
-            />
-            <div class="hero_text">
-              <h2>Text Overlay 3</h2>
-              <p>This is some text for image 3.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="full">
+      <!-- div テスト -->
+      <div class="full">
         <div class="hero__image2 hero__image-style"></div>
         <div class="hero__image3 hero__image-style"></div>
         <div class="hero__image hero__image-style">
+          
           <div class="hero__titles">
             <p class="hero__image__title1">ジーズなボディを手に入れたい！</p>
             <p class="hero__image__title2">
               G'sが誇る一流トレーナー陣がお手伝いします。
             </p>
           </div>
-        </div>
-      </div> -->
+      </div>
+
+      </div>
 
       <!-- ABOUT -->
       <div class="about__content">
@@ -120,7 +82,9 @@
           チーズ職人への就職・転職もサポートします。
         </p>
         <div>
-          <img class="hidden-price-image" src="./img/price.png" alt="" />
+          <a　href="">
+            <img class="hidden-price-image" src="./img/price.png" alt=""
+          /></a>
         </div>
         <!-- aboutイメージ -->
         <div class="slick__image">
@@ -421,11 +385,17 @@
     <!-- この中に記述していく -->
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <!-- <script src="js/main.js"></script> -->
+    <ul class="slider">
+      <li><img src="./img/about_01.jpg" alt="" /></li>
+      <li><img src="./img/about_02.jpg" alt="" /></li>
+      <li><img src="./img/about_03.jpg" alt="" /></li>
+      <li><img src="./img/about_04.jpg" alt="" /></li>
+    </ul>
 
     <script>
       // スリック
       $(".slider").slick({
-        slideToShow: 1,
+        slideToShow: 2,
       });
       // ハンバーガーメニュー
       const ham = $("#js-hamburger");
@@ -438,7 +408,7 @@
 
       // pr$(window).scrollice画像の表示
       $(function () {
-        $(window).scroll(function () {
+        (function () {
           const windowHeight = $(window).height();
           const scroll = $(window).scrollTop();
           $(".hidden-price-image").each(function () {
@@ -447,22 +417,6 @@
               $(this).addClass("is-fadein");
             }
           });
-        });
-      });
-      // スリック
-      $(document).ready(function () {
-        $(".slider").slick({
-          // arrows: false,
-          // dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 5000,
-          // pauseOnHover: false,
-          // fade: true,
-          cssEase: "linear",
         });
       });
     </script>

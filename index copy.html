@@ -8,11 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>チーズアカデミー</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style2.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"
-    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
   </head>
   <!-- 最初の設定は終わっています　必要な方は触ってください -->
 
@@ -24,9 +24,16 @@
         <div class="header__wrapper">
           <!-- ロゴ -->
           <div class="header__logo">
-            <img src="./img/header_logo.png" alt="" />
+            <!-- <img src="./img/header_logo.png" alt="" /> -->
+            <img class="body-logo" src="./img/logo.png" alt="" />
           </div>
-          <nav class="nav">
+          <!-- レスポンシブ用ハンバーガーメニュー -->
+          <div id="js-hamburger" class="header__hamburger hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="nav" id="js-nav">
             <ul class="nav__menu">
               <li class="navlist"><a href="#about">ABOUT</a></li>
               <li class="navlist"><a href="#course">COURSE</a></li>
@@ -36,26 +43,31 @@
             </ul>
           </nav>
         </div>
-      </header> 
+      </header>
       <!-- ヒーローイメージ -->
-      <div class="hero__image">
-        <div>
-          <p class="hero__image__title1">セカイを変えるチーズを作ろう</p>
-          <p class="hero__image__title2">
-            チーズ職人養成学校「チーズアカデミーTOKYO」
-          </p>
+      <!-- div テスト -->
+      <div class="full">
+        <div class="hero__image2 hero__image-style"></div>
+        <div class="hero__image3 hero__image-style"></div>
+        <div class="hero__image hero__image-style">
+          <div class="hero__titles">
+            <p class="hero__image__title1">ジーズなボディを手に入れたい！</p>
+            <p class="hero__image__title2">
+              G'sが誇る一流トレーナー陣がお手伝いします。
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- ABOUT -->
       <div class="about__content">
         <p id="about" class="en-title-style title-yellow">ABOUT</p>
-        <p class="sub-title">チーズアカデミーについて</p>
+        <p class="sub-title"></p>
         <p class="margin-bottom40">
-          チーズアカデミーは、チーズ職人養成学校です。
+          ジーズ24ジムは、プロボディビルダー養成学校です。
         </p>
         <p>
-          チーズの素晴らしさを、自給自足を通じて、できるだけ多くの人に知っていただきたい。
+          体づくりの素晴らしさを、筋トレを通じて、できるだけ多くの人に知っていただきたい。
         </p>
         <p class="margin-bottom40">
           そして、食卓にはいつもチーズがあった、あの頃の当たり前をこの手で取り戻したい。
@@ -67,12 +79,19 @@
         <p class="margin-bottom80">
           チーズ職人への就職・転職もサポートします。
         </p>
+        <div>
+          <a href="">
+            <img class="hidden-price-image" src="./img/price.png" alt=""
+          /></a>
+        </div>
         <!-- aboutイメージ -->
-        <div class="about__image">
-          <img src="./img/about_01.jpg" alt="" />
-          <img src="./img/about_02.jpg" alt="" />
-          <img src="./img/about_03.jpg" alt="" />
-          <img src="./img/about_04.jpg" alt="" />
+        <div class="slick__image">
+          <div class="about__image slider">
+            <img src="./img/about_01.jpg" alt="" />
+            <img src="./img/about_02.jpg" alt="" />
+            <img src="./img/about_03.jpg" alt="" />
+            <img src="./img/about_04.jpg" alt="" />
+          </div>
         </div>
       </div>
       <!-- COURSE -->
@@ -85,7 +104,7 @@
         <!-- カード1 -->
         <div class="card">
           <div class="card__image card__item">
-            <img class="aaa" src="./img/course_01.jpg" alt="" />
+            <img class="image-size" src="./img/course_01.jpg" alt="" />
           </div>
           <div class="card__content1 card__item">
             <div class="card__text1">
@@ -104,8 +123,11 @@
         <div class="card row-reverse">
           <div class="card__image card__item">
             <!-- <img src="./img/course_02.jpg" alt="" /> -->
-            <img src="./img/_69ab3d95-f36f-4c0b-be75-fd31e73c459d.jpeg" alt="" />
-
+            <img
+              class="image-size"
+              src="./img/_69ab3d95-f36f-4c0b-be75-fd31e73c459d.jpeg"
+              alt=""
+            />
           </div>
           <div class="card__content2 card__item">
             <div class="card__text2">
@@ -123,7 +145,7 @@
         <!-- カード3 -->
         <div class="card">
           <div class="card__image card__item">
-            <img src="./img/course_03.jpg" alt="" />
+            <img class="image-size" src="./img/course_03.jpg" alt="" />
           </div>
           <div class="card__content3 card__item">
             <div class="card__text3">
@@ -155,7 +177,7 @@
               Pizza」が渋谷でオープンしました！
             </p>
           </div>
-          <div class="news__card__content margin-center">
+          <div class="news__card__content margin-center hidden-card">
             <img class="news__image" src="./img/news_img.jpg" alt="" />
             <p class="yyyymmdd">2016/11/18</p>
             <p class="text-left">
@@ -164,7 +186,7 @@
               Pizza」が渋谷でオープンしました！
             </p>
           </div>
-          <div class="news__card__content">
+          <div class="news__card__content hidden-card">
             <img class="news__image" src="./img/news_img.jpg" alt="" />
             <p class="yyyymmdd">2016/11/18</p>
             <p class="text-left">
@@ -359,7 +381,42 @@
 
     <!-- ここから上にコードを書く -->
     <!-- この中に記述していく -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+    <ul class="slider">
+      <li><img src="./img/about_01.jpg" alt="" /></li>
+      <li><img src="./img/about_02.jpg" alt="" /></li>
+      <li><img src="./img/about_03.jpg" alt="" /></li>
+      <li><img src="./img/about_04.jpg" alt="" /></li>
+    </ul>
+
+    <script>
+      // スリック
+      $(".slider").slick({
+        slideToShow: 2,
+      });
+      // ハンバーガーメニュー
+      const ham = $("#js-hamburger");
+      const nav = $("#js-nav");
+      ham.on("click", function () {
+        //ハンバーガーメニューをクリックしたら
+        ham.toggleClass("active"); // ハンバーガーメニューにactiveクラスを付け外し
+        nav.toggleClass("active"); // ナビゲーションメニューにactiveクラスを付け外し
+      });
+
+      // pr$(window).scrollice画像の表示
+      $(function () {
+        (function () {
+          const windowHeight = $(window).height();
+          const scroll = $(window).scrollTop();
+          $(".hidden-price-image").each(function () {
+            const targetPosition = $(this).offset().top;
+            if (scroll > targetPosition - windowHeight + 100) {
+              $(this).addClass("is-fadein");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
